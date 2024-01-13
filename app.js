@@ -17,6 +17,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-var listener = app.listen(3000, function() {
+var listener = app.listen(8080, function () {
+  console.log("==========================================");
+  console.log("==========================================");
+  console.log("==========================================");
   console.log("Listening on port " + listener.address().port);
 });
