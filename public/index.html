@@ -3,6 +3,20 @@
 <head>
   <title>Express</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <script>
+    // Initialize the agent on page load.
+    const fpPromise = import('https://fpjscdn.net/v3/mRqCZQen4dS2bsC65Ncv')
+      .then(FingerprintJS => FingerprintJS.load())
+  
+    // Get the visitorId when you need it.
+    fpPromise
+      .then(fp => fp.get())
+      .then(result => {
+        const visitorId = result.visitorId
+        console.log(visitorId)
+      })
+  
+  </script>
 </head>
 
 <body>
