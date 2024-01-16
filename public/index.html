@@ -5,22 +5,22 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script>
     
-    // Initialize the agent on page load.
-    const fpPromise = import('https://fpjscdn.net/v3/mRqCZQen4dS2bsC65Ncv')
-      .then(FingerprintJS => FingerprintJS.load())
+    // // Initialize the agent on page load.
+    // const fpPromise = import('https://fpjscdn.net/v3/mRqCZQen4dS2bsC65Ncv')
+    //   .then(FingerprintJS => FingerprintJS.load())
 
   
     // Initialize the agent on page load.
-    // const fpPromise = import('https://vcltesting.xyz/fingerprint/vendor/sdk/v3/mRqCZQen4dS2bsC65Ncv')
-    //   .then(FingerprintJS => FingerprintJS.load({
-    //       apiKey: "mRqCZQen4dS2bsC65Ncv",
-    //       endpoint: [
-    //           'https://vcltesting.xyz/fingerprint/vendor/identify/',
-    //       ],
-    //       scriptUrlPattern: [
-    //           'https://vcltesting.xyz/fingerprint/vendor/sdk/v<version>/<apiKey>/loader_v<loaderVersion>.js'
-    //       ]
-    //   }));
+    const fpPromise = import('https://vcltesting.xyz/fingerprint/vendor/sdk/v3/mRqCZQen4dS2bsC65Ncv')
+      .then(FingerprintJS => FingerprintJS.load({
+          apiKey: "mRqCZQen4dS2bsC65Ncv",
+          endpoint: [
+              'https://vcltesting.xyz/fingerprint/vendor/identify/',
+          ],
+          scriptUrlPattern: [
+              'https://vcltesting.xyz/fingerprint/vendor/sdk/v<version>/<apiKey>/loader_v<loaderVersion>.js'
+          ]
+      }));
   
     // Get the visitorId when you need it.
     fpPromise
